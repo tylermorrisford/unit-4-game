@@ -1,0 +1,23 @@
+h1 {
+    font-size: 4rem;
+}
+
+nav {
+    border-bottom: 1px solid black;
+}
+
+button {
+    margin: 30px 45px 0;
+}
+
+.container {
+    margin: 10% auto 10%;
+}
+
+.hr2 {
+    width: 70%;
+}
+
+.buttons {
+    text-align: center;
+}
