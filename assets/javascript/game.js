@@ -7,7 +7,7 @@ let crystal2 = 0;
 let crystal3 = 0;
 let crystal4 = 0;
 chooseNumbers();
-})
+});
 
 // generate random numbers: target between 19-120; crystals between 1-12
 function chooseNumbers() {
@@ -15,6 +15,7 @@ target = getRandomRange(19,120);
 $('#targetNumber').text(target);
 console.log(target);
 crystal1 = getRandomRange(1,12);
+$('#c1').text(crystal1);
 crystal2 = getRandomRange(1,12);
 crystal3 = getRandomRange(1,12);
 crystal4 = getRandomRange(1,12);
@@ -33,22 +34,22 @@ crystal4 = 0;
 chooseNumbers();
 }
 
+
 // random number range
 function getRandomRange(min, max) {
     return Math.floor(Math.random() * (max - min)) + min;
   }
-  
+ 
+  $("button").click(function() { console.log("hey") });
+
+
+
 
 //   GAME PLAY_____________________________
 
 // if the user clicks the crystals, that amount is added to their score('mine')
-$('#c1').click(function() {
-    // mine += crystals amount
-    alert("hey steve");
-});
 
-alert("hey tim");
-
+ 
 // if the user score > target, loss; if the score = target, win
 
 // increment wins & losses
