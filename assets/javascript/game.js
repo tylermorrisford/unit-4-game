@@ -6,26 +6,32 @@ let crystal1 = 0;
 let crystal2 = 0;
 let crystal3 = 0;
 let crystal4 = 0;
+let wins = 0;
+let losses = 0;
 chooseNumbers();
 $("#c1").click(function() {
      console.log("hey c1");
     mine += crystal1;
     $("#myNumber").text(mine);
+    scoreCheck();
     });
 $("#c2").click(function() {
      console.log("hey c2");
      mine += crystal2;
      $("#myNumber").text(mine);
+     scoreCheck();
     });
 $("#c3").click(function() {
      console.log("hey c3");
      mine += crystal3;
      $("#myNumber").text(mine);
+     scoreCheck();
     });
 $("#c4").click(function() {
      console.log("hey c4");
      mine += crystal4;
      $("#myNumber").text(mine);
+     scoreCheck();
     });
 
 
@@ -33,7 +39,6 @@ $("#c4").click(function() {
 function chooseNumbers() {
 target = getRandomRange(19,120);
 $('#targetNumber').text(target);
-console.log(target);
 crystal1 = getRandomRange(1,12);
 crystal2 = getRandomRange(1,12);
 crystal3 = getRandomRange(1,12);
@@ -46,6 +51,7 @@ console.log( "c1 = " + crystal1 + " //  c2 = " + crystal2 + " //  c3 = " + cryst
 function reset() {
 target = 0;
 mine = 0;
+$('#myNumber').text(mine);
 crystal1 = 0;
 crystal2 = 0;
 crystal3 = 0;
@@ -60,6 +66,17 @@ function getRandomRange(min, max) {
   }
  
 //____GAME PLAY: if the user score > target, loss; if the score = target, win___
-if (mine === target)
-// increment wins & losses
+function scoreCheck() {
+    if (mine === target) {
+        wins++;
+        $("#winNumber").text(wins);
+        reset();
+    } else if (mine > target) {
+        losses++;
+        $("#lossesNumber").text(losses);
+        reset();
+    } else {
+        // do nothing
+    };
+}
 });
