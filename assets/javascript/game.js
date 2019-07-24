@@ -8,6 +8,8 @@ let crystal3 = 0;
 let crystal4 = 0;
 let wins = 0;
 let losses = 0;
+let oneWin = new Audio("assets/sounds/win.mp3");
+let oneLoss = new Audio("assets/sounds/loss.mp3");
 chooseNumbers();
 $("#c1").click(function() {
      console.log("hey c1");
@@ -70,10 +72,12 @@ function scoreCheck() {
     if (mine === target) {
         wins++;
         $("#winNumber").text(wins);
+        oneWin.play();
         reset();
     } else if (mine > target) {
         losses++;
         $("#lossesNumber").text(losses);
+        oneLoss.play();
         reset();
     } else {
         // do nothing
