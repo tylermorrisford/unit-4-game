@@ -1,4 +1,4 @@
-// when page loads, set game variables and generate numbers
+// when page loads, set game variables and audio, generate and assign numbers
 $(document).ready(function () {
     let target = 0;
     let mine = 0;
