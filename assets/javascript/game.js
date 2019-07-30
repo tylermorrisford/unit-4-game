@@ -40,7 +40,6 @@ $(document).ready(function () {
         crystal2 = getRandomRange(1, 12);
         crystal3 = getRandomRange(1, 12);
         crystal4 = getRandomRange(1, 12);
-        console.log("c1 = " + crystal1 + " //  c2 = " + crystal2 + " //  c3 = " + crystal3 + " //  c4 = " + crystal4 + ".")
     }
 
     // function to reset game for next round
